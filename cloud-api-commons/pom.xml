@@ -17,23 +17,34 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <!--服务之间通用的依赖-->
     <dependencies>
 
+        <!--热部署 并不是真正的热部署，只是理论上的。。。-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 
+        <!--查看 Spring 应用程序的信息 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--lombok插件 能帮我们生成实体类中的getter、setter方法 简化开发的 说白了就是懒。。-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!--hutool 国人开发的一个工具类 无侵入性 非常好用  -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
 
+        <!-- SpringBoot 测试场景启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

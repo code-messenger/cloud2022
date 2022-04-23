@@ -17,22 +17,21 @@
     </properties>
 
     <dependencies>
+
+        <!--通用依赖及组件-->
         <dependency>
             <groupId>cool.yunlong.cloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <!--web场景启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
+        <!--eureka客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
