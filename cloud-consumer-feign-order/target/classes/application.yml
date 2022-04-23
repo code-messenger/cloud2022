@@ -1,0 +1,34 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: cloud-consumer-feign-order
+eureka:
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+#设置Feign客户端超时时间（openfeign默认支持ribbon）
+ribbon:
+  ReadTimeout: 2000
+  ConnectTimeout: 2000
+  MaxAutoRetries: 2 #同一台实例最大重试次数,不包括首次调用
+  MaxAutoRetriesNextServer: 2 #重试负载均衡其他的实例最大重试次数,不包括首次调用
+  OkToRetryOnAllOperations: false #是否所有操作都重试 ,对于get请求不起作用
+
+#hystrix的超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 9000 # 熔断时间要大于重试时间 不然会触发熔断 导致重试没有效果
+
+logging:
+  level:
+    cool.yunlong.cloud.order.service: debug
