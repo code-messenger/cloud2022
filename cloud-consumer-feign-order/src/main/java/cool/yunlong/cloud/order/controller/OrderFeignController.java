@@ -25,4 +25,5 @@ public class OrderFeignController {
     public RestResponse<Payment> getById(@PathVariable("id") Long id) {
         return paymentFeignService.getPaymentById(id);  // 通过 OpenFeign 接口进行远程调用 面向接口调用
     }
+
 }
