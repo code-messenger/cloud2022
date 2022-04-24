@@ -46,5 +46,10 @@ public class PaymentController {
         }
         return new RestResponse<>(400, "查询失败");
     }
+
+    @GetMapping("/zipkin")
+    public String paymentZipkin() {
+        return "hi ,i'am paymentzipkin server，welcome to atguigu，O(∩_∩)O哈哈~";
+    }
 }
 
