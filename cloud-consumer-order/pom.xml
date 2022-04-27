@@ -25,6 +25,12 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <!--包含了sleuth+zipkin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
         <!--web场景启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

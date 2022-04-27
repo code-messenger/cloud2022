@@ -18,6 +18,11 @@
         <module>cloud-provider-hystrix-payment</module>
         <module>cloud-consumer-feign-hystrix-order</module>
         <module>cloud-consumer-hystrix-dashboard</module>
+        <module>cloud-gateway</module>
+        <module>cloudalibaba-provider-payment</module>
+        <module>cloudalibaba-consumer-nacos-order</module>
+        <module>cloudalibaba-config-nacos-client</module>
+        <module>cloudalibaba-sentinel-service</module>
     </modules>
 
     <properties>
@@ -55,6 +60,8 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>2.2.6.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <dependency>
